@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja Registradora House Seul</title>
+    <link rel="stylesheet" href="./CSS/Styles.css">
+</head>
+<body>
+    <h1>CAJA REGISTRADORA HOUSE SEUL</h1>
+    <form>
+        <label for="productSelect">Seleccione un plato</label>
+        
+        <select id="productSelect">
+            <option value="30000">Plato de kimchi - $30.000</option>
+            <option value="20000">Plato de ramen - $20.000</option>
+            <option value="100000">plato de sashimi  - $100.000</option>
+        </select>
+        <br>
+        <label for="priceInput">Precio</label>
+        <input type="text" id="priceInput" disabled>
+        <br>
+        <label for="quantityInput">Cantidad</label>
+        <input type="number" id="quantityInput" min="1" value="1">
+        <br>
+        <label for="totalInput">Total</label>
+        <input type="text" id="totalInput" disabled>
+        <br>
+        <button type="button" id="buyButton">COMPRAR</button>
+        <button type="button" id="clearButton">BORRAR</button>
+    </form>
+    <h2>Factura</h2>
+<table id="invoiceTable">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody id="invoiceBody">
+    </tbody>
+</table>
+<h2>Total a Pagar</h2>
+<div id="totalToPay"></div>
+    <script src="./JS/mainCaja.js"></script>
+</body>
+</html>
